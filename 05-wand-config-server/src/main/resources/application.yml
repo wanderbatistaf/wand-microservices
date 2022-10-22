@@ -1,0 +1,16 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: wand-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wanderbatistaf/wand-config-server
+          #Caso o repositorio seja privado#
+          #username: wand
+          #password: senha
+          default-label: main
+          search-paths:
+          - 'greeting-service*'
